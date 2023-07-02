@@ -1,0 +1,11 @@
+[
+    {
+        "emailField": "[for=\"email\"] > .login__input",
+        "passwordField": "[for=\"pwd\"] > .login__input",
+        "weekday": ".page-nav__day",
+        "film": ".conf-step__movies h3",
+        "movie": ".movie",
+        "booking_button": ".acceptin-button",
+        "booking_code_button": ".acceptin-button"
+    }
+]
