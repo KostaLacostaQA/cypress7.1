@@ -1,11 +1,9 @@
-[
-    {
-        "emailField": "[for=\"email\"] > .login__input",
-        "passwordField": "[for=\"pwd\"] > .login__input",
-        "weekday": ".page-nav__day",
-        "film": ".conf-step__movies h3",
-        "movie": ".movie",
-        "booking_button": ".acceptin-button",
-        "booking_code_button": ".acceptin-button"
-    }
-]
+{
+    "chosenDay": ".page-nav__day_chosen",
+    "halls": "div>ul>li",
+    "loginTitle" : ".login__title",
+    "controlHall" : "#hall-control",
+    "passField":"[type='password']",
+    "mailField":"[type='email']",
+    "qr":".ticket__info-qr"
+}

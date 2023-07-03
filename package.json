@@ -4,12 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test:booking:chrome": "cypress run --record --browser chrome --group booking --spec cypress/e2e/halls-chairs/booking.cy.js",
+    "test:booking:electron": "cypress run --record --browser electron --group booking --spec cypress/e2e/halls-chairs/booking.cy.js",
+    "test:booking:firefox": "cypress run --record --browser firefox --group booking --spec cypress/e2e/halls-chairs/booking.cy.js",
+    "test:halls:chrome": "cypress run --record --browser chrome --group halls --spec cypress/e2e/halls-chairs/halls.cy.js",
+    "test:halls:electron": "cypress run --record --browser electron --group halls --spec cypress/e2e/halls-chairs/halls.cy.js",
+    "test:halls:firefox": "cypress run --record --browser firefox --group halls --spec cypress/e2e/halls-chairs/halls.cy.js",
+    "test:loginAdmin:chrome": "cypress run --record --browser chrome --group loginAdmin --spec cypress/e2e/loginAdmin/loginAdmin.cy.js",
+    "test:loginAdmin:electron": "cypress run --record --browser electron --group loginAdmin --spec cypress/e2e/loginAdmin/loginAdmin.cy.js",
+    "test:loginAdmin:firefox": "cypress run --record --browser firefox --group loginAdmin --spec cypress/e2e/loginAdmin/loginAdmin.cy.js",
+    "test:loginAdminNegative:chrome": "cypress run --record --browser chrome --group loginAdmin --spec cypress/e2e/loginAdmin/loginAdminNegative.cy.js",
+    "test:loginAdminNegative:electron": "cypress run --record --browser electron --group loginAdmin --spec cypress/e2e/loginAdmin/loginAdminNegative.cy.js",
+    "test:loginAdminNegative:firefox": "cypress run --record --browser firefox --group loginAdmin --spec cypress/e2e/loginAdmin/loginAdminNegative.cy.js",
+    "test:parallel:chrome": "run-p -c test:booking:chrome test:halls:chrome test:loginAdmin:chrome test:loginAdminNegative:chrome",
+    "test:parallel:electron": "run-p -c test:booking:electron test:halls:electron test:loginAdmin:electron test:loginAdminNegative:electron",
+    "test:parallel:firefox": "run-p -c test:booking:firefox test:halls:firefox test:loginAdmin:firefox test:loginAdminNegative:firefox",
+    "test:halls-chairs": "cypress run --record --spec cypress/e2e/halls-chairs/*",
+    "test:login-admin": "cypress run --record --spec cypress/e2e/loginAdmin/*",
+    "test:two-folders": "run-p -c test:login-admin test:halls-chairs"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.16.0"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
   }
 }
